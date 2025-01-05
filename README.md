@@ -1,1 +1,1 @@
-https://github.com/DDDDD000/DDDDD000-ono-tebe-nado-fd
+https://github.com/DDDDD000/ono-tebe-nado-fd
