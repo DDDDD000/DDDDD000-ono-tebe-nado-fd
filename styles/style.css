@@ -1,5 +1,3 @@
-/* место для вашего кода */
-
 .header {
     display: grid;
     grid-template-columns: 1fr min-content 1fr;
@@ -8,18 +6,21 @@
     font-size: 18px;
 }
 
-.header__menu-list {
+.header__links-list {
     display: flex;
     gap: 32px;
     list-style: circle;
 }
 
-.header__menu-item {
+.header__links-list-item {
     text-decoration: underline;
 }
 
-.header__menu-list .header__menu-item_active {
+.header__links-list-item_no-bullit {
     list-style: none;
+}
+
+.header__link_active {
     text-decoration: none;
 }
 
@@ -32,6 +33,7 @@
 .address {
     justify-self: end;
     max-width: 240px;
+    font-style: normal;
 }
 
 /* Начало секции cover */
@@ -47,11 +49,8 @@
 
 .overlay {
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.5);
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
     z-index: auto;
 }
 
@@ -68,6 +67,7 @@
 .accent__span {
     display: block;
     margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
 .text-center {
@@ -100,6 +100,7 @@
     background-color: transparent;
     color: #FFF;
     border: solid #fff 1px;
+    text-transform: uppercase;
 }
 
 /* Начало секции lots */
@@ -124,40 +125,36 @@
 }
 
 .lots__card-list-item {
-    position: relative;
     list-style: none;
     width: 334px;
     min-height: 596px;
-    padding: 48px 40px;
 }
 
-.card-link .card {
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 48px 40px;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-link, .card {
     height: 100%;
     color: #FFF;
 }
 
 .card_type_film {
     background-image: url(../images/card-lot-01.jpg);
-    background-size: cover;
-    background-position: center;
 }
 
 .card_type_book {
     background-image: url(../images/card-lot-02.jpg);
-    background-size: cover;
-    background-position: center;
 }
 
 .card_type_picture {
     background-image: url(../images/card-lot-03.jpg);
-    background-size: cover;
-    background-position: center;
-}
-
-.card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .card__title {
@@ -216,15 +213,13 @@
 }
 
 .about__text {
+    display: block;
     font-size: 20px;
     line-height: 24px;
     line-break: auto;
+    margin-bottom: 24px;
 }
 
-.about__text span{
-    margin-top: 24px;
-    display: block;
-}
 
 /* Начало секции footer */
 
@@ -247,7 +242,7 @@
     list-style: none;
 }
 
-.footer__menu-list-item .footer__menu-link_active {
+.footer__menu-link_active {
     text-decoration: none;
 }
 
@@ -259,6 +254,9 @@
 
 .footer__social-list-item {
     list-style: none;
+}
+
+.footer__social-icon {
     width: 48px;
     height: 48px;
 }
